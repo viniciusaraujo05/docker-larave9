@@ -57,4 +57,32 @@ class PostController extends Controller
     {
         return Post::all();
     }
+
+    /**
+     * Update method
+     *
+     * @param Request $request
+     *
+     * @return mixed
+     */
+    public function update(Request $request)
+    {
+        $post = Post::where('id','>', 0)->update([
+            'author' => 'Quiabo marcelo'
+        ]);
+
+        return $post;
+    }
+
+    public function delete(Request $request)
+    {
+        $post = Post::find(5);
+
+        if($post) {
+            return $post->delete();
+        }
+
+        return "post not found
+" ;
+    }
 }

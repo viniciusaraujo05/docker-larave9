@@ -8,6 +8,9 @@ Route::get('/users/{qty}', [\App\Http\Controllers\SiteController::class, 'users'
 Route::get('/posts/create/', [\App\Http\Controllers\PostController::class, 'create']);
 Route::get('/posts/read/', [\App\Http\Controllers\PostController::class, 'read']);
 Route::get('/posts/read_all/', [\App\Http\Controllers\PostController::class, 'readAll']);
+Route::get('/posts/update/', [\App\Http\Controllers\PostController::class, 'update']);
+Route::get('/posts/delete',[\App\Http\Controllers\PostController::class, 'delete']);
+
 
 
 
